@@ -140,3 +140,42 @@ h1 {
 #clear-button:hover {
   background-color: #0079db;
 }
+
+
+@media (max-width: 600px) {
+  html, body {
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
+    background-color: #1976d2;
+  }
+
+  #app {
+    width: 100vw;
+    max-width: 100vw;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+  }
+
+  #main {
+    width: 100vw;
+    max-width: 100vw;
+    padding: 1rem;
+    box-sizing: border-box;
+    align-items: stretch !important;
+  }
+
+  #tasks {
+    width: 100vw;
+    max-width: 100vw;
+    min-height: 10em;
+    height: auto;
+    border-radius: 15px;
+    box-sizing: border-box;
+  }
+
+  #input-field {
+    width: 80vw;
+    font-size: 1rem;
+  }
+}
