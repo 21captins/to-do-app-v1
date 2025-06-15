@@ -14,6 +14,10 @@ taskButton.addEventListener("click", function(){
         return;
     }
 
+
+    const dih = document.createElement("div")
+    dih.setAttribute("id", "dih-box")
+
     const listItem = document.createElement("li")
     const task = taskInput.value
     listItem.textContent = task
@@ -22,8 +26,10 @@ taskButton.addEventListener("click", function(){
 
     const deleteItem = document.createElement("button")
     const clearItem = document.createElement("button")
+
+
     deleteItem.addEventListener("click", function(){
-        listItem.remove()
+        dih.remove()
         const deleteItem = new Audio("sound/delete.mp3")
         deleteItem.play()
     })
@@ -44,7 +50,14 @@ taskButton.addEventListener("click", function(){
 
     listItem.append(deleteItem)
     listItem.append(clearItem)
-    controlList.append(listItem)
+    dih.append(listItem)
+    controlList.append(dih)
+
+    // Dynamically increase ul width
+    const baseWidth = 200; // starting width in px
+    const widthPerItem = 40; // px to add per item
+    const itemCount = controlList.children.length;
+    controlList.style.width = (baseWidth + widthPerItem * itemCount) + "px";
 
     taskInput.value = "";
 })
