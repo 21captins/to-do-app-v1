@@ -163,6 +163,7 @@ h1 {
     padding: 1rem;
     box-sizing: border-box;
     align-items: stretch !important;
+    margin-top: 5rem;
   }
 
   #tasks {
